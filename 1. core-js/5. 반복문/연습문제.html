@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math.random() : 0.0 이상 1.0 미만의 랜덤값.
+        // Math.floor() : 내림, Math.ceil() : 올림, Math.round() : 반올림
+        // Math.floor((Math.random() * 100) + 1);
+
+        while (true) {
+
+            var num1 = Math.floor(Math.random() * 19 + 1);
+            var num2 = Math.floor(Math.random() * 19 + 1);
+            var oper = Math.floor(Math.random() * 3);
+            var answer;
+            var cCount, wCount, total;
+
+            switch (oper) {
+                case 0: {
+                    var plus = `${num1} + ${num2} = ???`;
+                    answer = prompt(plus);
+
+                    if (answer == (num1 + num2)) {
+                        alert('정답입니다.');
+                    } else {
+                        alert('오답입니다.');
+                    }
+                    break;
+                }
+
+                case 1: {
+                    var minus = `${num1} - ${num2} = ???`;
+                    answer = prompt(minus);
+
+                    if (answer == (num1 - num2)) {
+                        alert('정답입니다.');
+                    } else {
+                        alert('오답입니다.');
+                    }
+                    break;
+                }
+
+                default: {
+                    var times = `${num1} x ${num2} = ???`;
+                    answer = prompt(minus);
+
+                    if (answer == (num1 * num2)) {
+                        alert('정답입니다.');
+                    } else {
+                        alert('오답입니다.');
+                    }
+                }
+            }
+
+            if (answer === '그만') {
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

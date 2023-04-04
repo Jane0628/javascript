@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var score = 70;
+        var result = score >= 60 ? '합격' : '불합격';
+        console.log('시험결과 : ' + result);
+
+        /*
+            가지고 있는 돈 액수를 입력받아서 액수가 5000이상이라면 '김치찌개'를,
+            5000 미만이라면 '라면'을 저장하고 alert로 선택한 음식을 출력하세요.
+        */
+
+        var money = +prompt('현재 가지고 있는 돈의 액수를 입력해주세요.');
+
+        // if (money >= 5000) {
+        //     alert('김치찌개');
+        // } else {
+        //     alert('라면');
+        // }
+
+        var food = money >= 5000 ? alert('김치찌개') : alert('라면');
+    </script>
+</body>
+
+</html>

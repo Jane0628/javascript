@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Q. n개의 정수를 전달하면 해당 정수들의 
+            총합과 평균을 반환하는 함수 
+            calcTotAvg를 정의하세요.
+            화살표 함수를 사용하면서
+            리턴은 객체로 됩니다.
+        */
+
+        var calcTotAvg = (...number) => {
+            var total = 0;
+            for (var n of number) {
+                total += n;
+            }
+            return {
+                total, // ES6부터는 key와 value의 값이 동일하다면 하나만 작성해도 된다.
+                avg: Math.round(total / number.length * 100) / 100
+            }
+        }
+
+        console.log(calcTotAvg(10, 40, 52, 71, 93));
+    </script>
+</body>
+
+</html>
