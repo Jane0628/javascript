@@ -71,10 +71,11 @@
         */
 
         const $toggle = document.querySelector('.toggle');
+        const $toggleMenu = [...document.querySelectorAll('.toggle-menu')];
 
         $toggle.addEventListener('click', e => {
-            if (e.currentTarget !== e.target) {
-
+            for (let $i of $toggleMenu) {
+                $i.classList.toggle('active', e.target.getAttribute('data-id') === '#' + $i.getAttribute('id'));
             }
         });
 
