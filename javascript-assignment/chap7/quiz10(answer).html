@@ -38,15 +38,16 @@
             사진을 클릭할 때마다 결과 화면이 그 사진으로 바뀌면 됩니다. 
         */
 
-        const $ul = document.querySelectorAll('li');
-        const $result = document.querySelector('.result img');
+        const $ul = document.querySelector('ul');
+        const $img = document.querySelector('.result img');
 
-        for (let i of [...$ul]) {
-            i.onclick = function (e) {
-                console.log($result.src);
-                $result.src = e.target.src;
+        $ul.addEventListener('click', e => {
+            if (!e.target.matches('ul > li > img')) {
+                return;
             }
-        }
+
+            $img.setAttribute('src', e.target.src);
+        });
 
     </script>
 
